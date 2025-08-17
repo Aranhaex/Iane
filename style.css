@@ -1,0 +1,151 @@
+h1{
+    padding-left: 29%;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 50px;
+    color: whitesmoke;
+}
+body{
+  background-image: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3c5ZTN0Yjd5MzhrdnRtZ25oYm9pNmJrYXg3M2xlc2VvemR2azdzaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tfrLxcQkvKsRCbNjHy/giphy.gif');
+  background-repeat: no-repeat;
+  background-size:cover 10px;
+  background-position: center;
+  background-color: rgb(255, 199, 198);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+
+}
+
+p{
+  color: rgb(244, 248, 6);
+  font-size: larger;
+  align-content: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+
+#meuTexto {
+  overflow: hidden;
+  color: #450101;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.9s ease, opacity 1.0s ease;
+  padding-left: 100px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  width: 300px; /* define a largura máxima do texto */
+  word-wrap: break-word; /* quebra palavras longas */
+  overflow-wrap: break-word; /* também ajuda a quebrar */
+  white-space: normal; /* permite que o texto vá para a linha de baixo */
+}
+
+#meuTexto.mostrado {
+  max-height: 320px; /* Altura máxima suficiente para o conteúdo */
+  opacity: 1;
+}
+
+
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    background-image: Url('coracao.png');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    
+  }
+  
+
+  .close-btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 25%;
+    padding: 4px;
+  }
+
+  button {
+    display: block; /* Garantir que o botão seja tratado como um bloco */
+    margin: 30px auto; /* Auto vai centralizar horizontalmente */
+    padding: 10px 20px;
+    background-color: #5d07e8;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+  button:hover {
+    background-color: #09a5de; /* Cor ao passar o mouse */
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Altura total da janela */
+  }
+
+  body {
+    overflow: hidden;
+}
+.coracao {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transform: rotate(45deg);
+  top: -20px;
+  animation: fall 5s linear infinite;
+}
+
+.coracao::before,
+.coracao::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.coracao::before {
+  top: -10px;
+  left: 0;
+}
+
+.coracao::after {
+  top: 0;
+  left: -10px;
+}
+
+@keyframes fall {
+  to {
+      top: 100vh;
+      transform: translateX(var(--move-x)) rotate(45deg);
+  }
+}
