@@ -24,7 +24,7 @@ function showPopup() {
 
 
   function createHearts() {
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 70; i++) {
         const coracao = document.createElement('div');
         coracao.className = 'coracao';
         coracao.style.left = Math.random() * 100 + 'vw';
@@ -47,4 +47,5 @@ function showPopup() {
   }
     
   
+
 }
